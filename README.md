@@ -7,6 +7,22 @@ The project includes two main components:
 1.  A core test suite that validates the parser generation against example files.
 2.  A full-stack interactive web application (Haskell backend, JavaScript frontend) that provides a live editor to test the generator.
 
+---
+
+## 🌟 Features
+
+This generator includes a robust interactive web interface with several key features:
+
+* **Save Generated Code:** Users can save the generated Haskell parser module directly to a `.hs` file using the "Save Haskell" button.
+
+* **Live Grammar Validation:** The system provides real-time feedback in a "Validation" panel, detecting common grammar errors, including:
+    * Duplicated rules
+    * Undefined non-terminals
+    * Left-recursive rules
+    * Incorrect arity (mismatched number of arguments)
+
+* **Robust Parser Generation:** Any rules that are broken or invalid are automatically excluded from the generated Haskell code and the parser selection list, preventing compilation errors.
+
 -----
 
 > ### 📜 Course & Author Information
@@ -77,3 +93,5 @@ $ npm run dev
 ```
 
 This will open a link in your browser (usually `http://localhost:5173` or similar). You can now type your own BNF grammar into the left-hand panel and see the generated Haskell parser code on the right.
+
+<img width="1836" height="916" alt="image" src="https://github.com/user-attachments/assets/082eac4b-94e6-4d72-ba47-8664af21b030" />
