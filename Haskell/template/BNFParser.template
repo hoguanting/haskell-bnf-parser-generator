@@ -1,0 +1,21 @@
+module Output where
+
+import Control.Applicative (many, optional, some, (<|>))
+import Instances (ParseResult (..), Parser (..))
+import Parser
+    ( alpha
+    , charTok
+    , eof
+    , int
+    , is
+    , string
+    , stringTok
+    , tok
+    )
+-- only importing some things from prelude to minimise conflicts with builtins
+import Prelude (Char, Int, Maybe, Show, String, show, (<$>), (<*), (<*>))
+
+runParser :: Show a => Parser a -> String -> String
+runParser p s = case parse (p <* eof) s of
+    Result _ a -> show a
+    Error _ -> "Parse Error"

@@ -1,0 +1,25 @@
+{
+    "folders": [
+        {
+            "path": ".",
+        },
+        {
+            "path": "Haskell",
+        },
+        {
+            "path": "JS",
+        },
+    ],
+    "settings": {
+        "files.exclude": {
+            "**/*.dyn_*": true,
+            "**/*.hi": true,
+            "**/*.o": true,
+        },
+        "[typescript]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "editor.formatOnSave": true,
+        },
+        "haskell.plugin.eval.codeLensOn": false,
+    },
+}

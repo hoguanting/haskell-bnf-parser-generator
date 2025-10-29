@@ -1,0 +1,7 @@
+<start> ::= <expr>
+<expr> ::= <term> "+" <expr> | <term>
+<term> ::= <factor>
+<factor> ::= <expr> "*" <factor> | <number>
+<number> ::= [int]
+<duplicated> ::= "a"
+<duplicated> ::= "b"

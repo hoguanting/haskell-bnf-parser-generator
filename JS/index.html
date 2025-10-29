@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BNF to Haskell Parser Generator</title>
+        <link rel="stylesheet" href="/style.css" />
+    </head>
+
+    <body>
+        <header>
+            <h1>BNF to Haskell Parser Generator</h1>
+        </header>
+
+        <main>
+            <div id="container">
+                <section id="input-section">
+                    <h2>Enter Grammar:</h2>
+                    <textarea
+                        id="grammar-input"
+                        placeholder="Enter your grammar here"
+                    ></textarea>
+                    <h2>Enter Parser Input:</h2>
+                    <textarea
+                        id="string-input"
+                        placeholder="Enter the string to parse"
+                    ></textarea>
+                </section>
+                <section id="output-section">
+                    <h2>Grammar Parse Error:</h2>
+                    <output
+                        id="grammar-parse-error-output"
+                        for="grammar-input string-input"
+                        class="output"
+                    ></output>
+                    <h2>Parser Output:</h2>
+                    <output
+                        id="parser-output"
+                        for="grammar-input string-input"
+                        class="output"
+                    ></output>
+                    <h2>Validation Output:</h2>
+                    <output
+                        id="validate-output"
+                        for="grammar-input"
+                        class="output"
+                    ></output>
+                </section>
+            </div>
+            <div>
+                <select id="parserSelect"></select>
+                <button id="runParser">Run Parser</button>
+                <button id="saveButton">Save Haskell</button>
+            </div>
+        </main>
+        <script src="./src/main.ts" type="module"></script>
+    </body>
+</html>

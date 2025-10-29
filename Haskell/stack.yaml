@@ -1,0 +1,4 @@
+snapshot: lts-23.25
+packages:
+    - .
+system-ghc: false

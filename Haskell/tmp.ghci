@@ -1,0 +1,9 @@
+:module +Assignment
+import qualified Instances
+import qualified Parser
+let grammar = "<program>    ::= <statement>*\n<statement>  ::= \"console.log(\" <expression> \");\" <comment>? [newline]\n<expression> ::= <term> | <term> \"+\" <expression>\n<term>       ::= <factor> | <factor> \"*\" <term>\n<factor>     ::= tok <number> | tok <variable> | tok \"(\" <expression> tok \")\"\n<number>     ::= [int]\n<variable>   ::= [alpha]\n<pair(a, b)> ::= [a] \",\" [b]\n<numberPair> ::= <pair([int], [int])>\n<comment>    ::= \" // \" [alpha]\n"
+let Instances.Result _ adt = Instances.parse bnfParser grammar
+Prelude.print (map Assignment.ruleName adt)
+Prelude.print (validate adt)
+Prelude.putStrLn (generateHaskellCode adt)
+:quit

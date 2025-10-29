@@ -1,0 +1,4 @@
+<expression> ::= <term> | <term> "+" <expression>
+<term>       ::= <factor> | <factor> "*" <term>
+<factor>     ::= "(" <expression> ")" | <number>
+<number>     ::= [int]

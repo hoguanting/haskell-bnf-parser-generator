@@ -1,0 +1,9 @@
+:module +Assignment
+import qualified Instances
+let grammar = "<expression> ::= <term> | <term> \"+\" <expression>\n<term> ::= <factor> | <factor> \"*\" <term>\n<factor> ::= \"(\" <expression> \")\" | <number>\n<number> ::= [int]\n"
+let Instances.Result _ adt = Instances.parse bnfParser grammar
+Prelude.print (map ruleName adt)
+Prelude.print (map ruleName (keepFirstRules adt))
+Prelude.print (validate adt)
+Prelude.putStrLn (generateHaskellCode adt)
+:quit
